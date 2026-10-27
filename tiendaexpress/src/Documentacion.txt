@@ -1,0 +1,62 @@
+#Documentación del Proyecto: Tienda Express - Reto ADSO
+
+**Integrantes del equipo:
+*Maryuri Mesa Talaga
+*Camila Castaño Grisales
+
+---
+
+##1. CASO DE ESTUDIO (PROBLEMA)
+Tienda Express es una tienda de productos de tecnología y accesorios que actualmente registra sus 
+ventas de forma manual en libretas y hojas de cálculo. Esta forma de trabajo genera errores humanos, 
+pérdida de información y dificultad para conocer el estado real de los pedidos y del inventario.
+
+---
+
+##2. LA MISIÓN Y PROPUESTA DE SOLUCIÓN
+Como equipo de desarrollo de software, propusimos y construimos un prototipo funcional utilizando React, 
+TypeScript y Vite que permite digitalizar el proceso comercial de Tienda Express:
+
+* Registrar productos con control de inventario.
+* Crear pedidos asociando clientes y productos con validación de stock.
+* Consultar y cambiar el estado de los pedidos en tiempo real.
+
+---
+
+##3. REQUERIMIENTOS MÍNIMOS DEL SISTEMA
+
+### Requerimientos Funcionales
+1. **RF01 - Registrar Productos:** El sistema permite registrar productos indicando su nombre, categoría, precio y stock disponible.
+
+2. **RF02 - Registrar Pedidos:** El sistema permite registrar pedidos especificando el nombre del cliente, el producto seleccionado, 
+la cantidad deseada y la fecha de registro.
+
+3. **RF03 - Validaciones del Sistema:** Valida de forma obligatoria que todos los campos del formulario estén llenos y que la cantidad 
+solicitada no supere el stock disponible del producto.
+
+4. **RF04 - Almacenamiento en Memoria:** Toda la información de productos y pedidos se almacena dinámicamente en vectores (arreglos) en memoria.
+
+5. **RF05 - Listado de Productos:** Muestra en pantalla una tabla con el inventario actualizado de productos.
+
+6. **RF06 - Listado y Cambio de Estado de Pedidos:** Muestra un listado de los pedidos realizados indicando su estado (*Pendiente*, *En proceso*, *Entregado*) 
+y permite actualizarlo de forma interactiva mediante un selector.
+
+---
+
+### Requerimientos No Funcionales y Técnicos
+1. **RNF01 - Usabilidad y Rendimiento:** Interfaz limpia e intuitiva que actualiza el inventario y los estados en tiempo real sin recargar la página web.
+
+2. **RNF02 - Tecnologías Utilizadas:** Desarrollado con HTML5, CSS3, JavaScript/TypeScript,
+React (componentes funcionales con hooks) y Vite como entorno de desarrollo.
+
+---
+
+##4. ESTRUCTURA DEL CÓDIGO FUENTE
+El proyecto fue construido de forma modular y limpia con la siguiente organización en la carpeta `src`:
+
+* `modelos.ts`: Interfaces y tipos de datos principales (`Producto`, `Pedido`, `EstadoPedido`).
+* `FormularioProducto.tsx`: Componente encargado de la captura de datos del inventario.
+* `FormularioPedido.tsx`: Componente para la creación de pedidos y comprobación de stock.
+* `TablaProductos.tsx`: Componente de lectura e iteración del listado de inventario.
+* `TablaPedidos.tsx`: Componente de lectura y actualización de estados de pedidos.
+* `main.tsx`: Componente principal que integra la lógica global del estado en memoria y renderiza la aplicación.
